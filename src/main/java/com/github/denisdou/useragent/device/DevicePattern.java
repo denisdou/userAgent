@@ -79,7 +79,15 @@ public class DevicePattern {
         if (deviceFamily == null) {
             deviceFamily = Constants.DEFAULT_VALUE;
         }
-        return deviceVendor == null ? null : new Device(deviceVendor, deviceFamily, deviceTypeString, isMobile, screenSize(agentString));
+        //parse device id
+        String uuid = deviceId(agentString);
+        return deviceVendor == null ? null : new Device(deviceVendor, deviceFamily, deviceTypeString, isMobile, screenSize(agentString), uuid);
+    }
+
+    private String deviceId(String agentString) {
+        Pattern deviceIdPattern = Pattern.compile("[\\s&;\"](deviceid|deviceId|sdk_guid|UTDID|GUID|guid|Id|ID|id|udid|UDID|MZ)[\" /:=]+([\\w-]+)", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = deviceIdPattern.matcher(agentString);
+        return matcher.find() ? matcher.group(2) : Constants.DEFAULT_VALUE;
     }
 
     //parse screen size

@@ -26,7 +26,6 @@ repositories {
 dependencies {
     compile group: 'org.yaml', name: 'snakeyaml', version: '1.27'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
-    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.75'
 }
 
 task sourceJar(type: Jar) {

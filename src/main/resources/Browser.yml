@@ -2,7 +2,7 @@
 # vendor        browser vendor, e.g. IE, Chrome, Firefox, Opera. default value is "family"
 # family        browser family name, e.g. Chrome, Mobile Chrome. default value is Group 1
 # majorVersion  major version. default value is Group 2
-# minorVersion  minor version.default value is Group 3
+# minorVersion  minor version. default value is Group 3
 ##########################################################################
 
 ########
@@ -416,13 +416,13 @@
 # Mailmaster
 #######
 - regex: '(mailmaster)'
-  brand_replactment: 'MailMaster'
+  vendor: 'MailMaster'
   family: 'MailMaster'
 
 - regex: '(mailmaster)[ /](\d+)\.?(\d+)?'
 
 - regex: '(mailmasterpro)[ /](\d+)\.?(\d+)?'
-  brand_replactment: 'MailMaster'
+  vendor: 'MailMaster'
   family: 'MailMaster'
 
 #######
@@ -437,14 +437,14 @@
 - regex: '(airmail|barca|eudora|gcmail|lotus-notes|pocomail|postbox|shredder|sparrow|spicebird|the bat!|gcmail browser)[ /](\d+)\.?(\d+)?'
 
 - regex: '(the bat! voyager)[ /](\d+)\.?(\d+)?'
-  brand_replactment: 'The Bat'
+  vendor: 'The Bat'
   family: 'The Bat'
 
 #######
 # Windows Live Mail
 ######
 - regex: '(outlook-express)[ /](\d+)\.?(\d+)?'
-  brand_replactment: 'Windows Live Mail'
+  vendor: 'Windows Live Mail'
   family: 'Windows Live Mail'
 
 #### END MAIL CASES ####
@@ -452,6 +452,11 @@
 
 ##########################################################################
 #### SPECIAL CASES TOP ####
+###########################
+# SailfishBrowser
+###########################
+- regex: '(sailfishbrowser)/(\d+)\.(\d+)'
+  family: 'Sailfish Browser'
 
 ##########
 # Firefox
@@ -792,3 +797,147 @@
 
 - regex: '(android) honeycomb'
   majorVersion: '3'
+
+###############
+# pim
+###############
+- regex: 'Outlook-Express(?:/(\d+[\.\d]+))?'
+  vendor: 'Microsoft'
+  family: 'Outlook Express'
+  majorVersion: '1'
+
+- regex: 'Microsoft Outlook(?:[/ ](\d+[\.\d]+))?'
+  vendor: 'Microsoft'
+  family: 'Microsoft Outlook'
+  majorVersion: '1'
+
+- regex: '(?:Thunderbird|Icedove|Shredder)(?:/(\d+[\.\d]+))?'
+  family: 'Thunderbird'
+  majorVersion: '1'
+
+- regex: 'Airmail(?: (\d+[\.\d]+))?'
+  family: 'Airmail'
+  majorVersion: '1'
+
+- regex: 'Lotus-Notes(?:/(\d+[\.\d]+))?'
+  family: 'Lotus Notes'
+  majorVersion: '1'
+
+- regex: 'Barca(?:Pro)?(?:[/ ](\d+[\.\d]+))?'
+  family: 'Barca'
+  majorVersion: '1'
+
+- regex: 'Postbox(?:[/ ](\d+[\.\d]+))?'
+  family: 'Postbox'
+  majorVersion: '1'
+
+- regex: 'MailBar(?:[/ ](\d+[\.\d]+))?'
+  family: 'MailBar'
+  majorVersion: '1'
+
+- regex: 'The Bat!(?: Voyager)?(?:[/ ](\d+[\.\d]+))?'
+  family: 'The Bat!'
+  majorVersion: '1'
+
+- regex: 'DAVdroid(?:/(\d+[\.\d]+))?'
+  family: 'DAVdroid'
+  majorVersion: '1'
+
+# SeaMonkey
+- regex: '(?:SeaMonkey|Iceape)(?:/(\d+[\.\d]+))?'
+  family: 'SeaMonkey'
+  majorVersion: '1'
+
+##################
+# media players
+##################
+- regex: 'Audacious(?:[ /]([\d\.]+))?'
+  family: 'Audacious'
+  majorVersion: '1'
+
+- regex: 'Banshee(?:[ /]([\d\.]+))?'
+  family: 'Banshee'
+  majorVersion: '1'
+
+- regex: 'Boxee(?:[ /]([\d\.]+))?'
+  family: 'Boxee'
+  majorVersion: '1'
+
+- regex: 'Clementine(?:[ /]([\d\.]+))?'
+  family: 'Clementine'
+  majorVersion: '1'
+
+- regex: 'Deezer(?:/([\d\.]+))?'
+  family: 'Deezer'
+  majorVersion: '1'
+
+- regex: 'iTunes(?:-iPhone|-iPad)?(?:/([\d\.]+))?'
+  family: 'iTunes'
+  majorVersion: '1'
+
+- regex: 'FlyCast(?:/([\d\.]+))?'
+  family: 'FlyCast'
+  majorVersion: '1'
+
+- regex: 'foobar2000(?:/([\d\.]+))?'
+  family: 'Foobar2000'
+  majorVersion: '1'
+
+- regex: 'MediaMonkey(?:[ /](\d+[\.\d]+))?'
+  family: 'MediaMonkey'
+  majorVersion: '1'
+
+- regex: 'Miro(?:/(\d+[\.\d]+))?'
+  family: 'Miro'
+  majorVersion: '1'
+
+- regex: 'NexPlayer(?:/(\d+[\.\d]+))?'
+  family: 'NexPlayer'
+  majorVersion: '1'
+
+- regex: 'Nightingale(?:/([\d\.]+))?'
+  family: 'Nightingale'
+  majorVersion: '1'
+
+- regex: 'QuickTime(?:(?:(?:.+qtver=)|(?:(?: E-)?[\./]))([\d\.]+))?'
+  family: 'QuickTime'
+  majorVersion: '1'
+
+- regex: 'Songbird(?:/([\d\.]+))?'
+  family: 'Songbird'
+  majorVersion: '1'
+
+- regex: 'SubStream(?:/([\d\.]+))?'
+  family: 'SubStream'
+
+- regex: '(?:Lib)?VLC(?:/([\d\.]+))?'
+  family: 'VLC'
+
+- regex: 'Winamp(?:MPEG)?(?:/(\d+[\.\d]+))?'
+  family: 'Winamp'
+
+- regex: '(?:Windows-Media-Player|NSPlayer)(?:/(\d+[\.\d]+))?'
+  family: 'Windows Media Player'
+
+- regex: 'XBMC(?:/([\d\.]+))?'
+  family: 'XBMC'
+
+- regex: 'Kodi(?:/([\d\.]+))?'
+  family: 'Kodi'
+
+- regex: 'stagefright(?:/([\d\.]+))?'
+  family: 'Stagefright'
+
+- regex: 'GoogleChirp(?:/(\d+[\.\d]+))?'
+  family: 'Google Podcasts'
+
+- regex: 'Music Player Daemon (?:(\d+[\.\d]+))?'
+  family: 'Music Player Daemon'
+
+- regex: 'mpv (?:(\d+[\.\d]+))?'
+  family: 'mpv'
+
+#Tizen Browser
+- regex: '(?:Tizen|SLP) Browser(?:/(\d+[\.\d]+))?'
+  vendor: 'Tizen'
+  family: 'Tizen Browser'

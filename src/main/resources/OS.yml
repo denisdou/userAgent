@@ -8,6 +8,30 @@
 #########################################################################
 
 ##########
+# Tizen
+##########
+- regex: 'Tizen[ /]?((\d+)[\.]?(\d+)?)?'
+  osName: 'Tizen'
+  isMobile: 'true'
+  isTv: 'false'
+
+##########
+## Sailfish OS
+###########
+- regex: '(?:Sailfish|Jolla)[ /]?((\d+)[\.]?(\d+)?)?'
+  osName: 'Sailfish OS'
+  isMobile: 'true'
+  isTv: 'false'
+
+##########
+# YunOS (Android based)
+##########
+- regex: '(?:Ali)?YunOS[ /]?(\d+[\.\d]+)?'
+  osName: 'YunOS'
+  isMobile: 'true'
+  isTv: 'false'
+
+##########
 # SmartTV special cases
 # Youku SmartTV;5.0.1;Android;4.4.4;xmate_dr31
 ##########
@@ -97,6 +121,85 @@
   isMobile: 'true'
 
 ##########
+# Windows IoT
+##########
+- regex: 'Windows IoT 10.0'
+  osName: 'Windows IoT'
+  majorVersion: '10'
+  isMobile: 'true'
+  isTv: 'false'
+
+##########
+# KaiOS
+##########
+- regex: 'KAIOS/((\d+)\.(\d+))?'
+  osName: 'KaiOS'
+  isMobile: 'true'
+  isTv: 'false'
+
+##########
+# Custom Android Roms
+##########
+- regex: 'RazoDroiD(?: v((\d+)\.(\d+))?'
+  name: 'RazoDroiD'
+  isMobile: 'true'
+  isTv: 'false'
+
+- regex: 'MildWild(?: CM-(\d+)\.(\d+))?'
+  name: 'MildWild'
+  isMobile: 'true'
+  isTv: 'false'
+
+- regex: 'CyanogenMod(?:[\-/](?:CM)?(\d+[\.\d]*))?'
+  name: 'CyanogenMod'
+  isMobile: 'true'
+  isTv: 'false'
+
+- regex: '(?:.*_)?MocorDroid(?:(\d+)\.(\d+))?'
+  name: 'MocorDroid'
+  isMobile: 'true'
+  isTv: 'false'
+
+- regex: 'Fire OS(?:/(\d+)\.(\d+))?'
+  name: 'Fire OS'
+  isMobile: 'true'
+  isTv: 'false'
+
+##########
+# AmigaOS
+##########
+- regex: 'AmigaOS[ ]?(\d+[\.\d]+)'
+  name: 'AmigaOS'
+  isMobile: 'false'
+  isTv: 'false'
+
+- regex: 'AmigaOS|AmigaVoyager|Amiga-AWeb'
+  name: 'AmigaOS'
+  isMobile: 'false'
+  isTv: 'false'
+
+##########
+# ThreadX
+##########
+- regex: 'ThreadX(?:/(\d+[\.\d]*))?'
+  name: 'ThreadX'
+  isMobile: 'false'
+  isTv: 'false'
+
+##########
+# MTK / Nucleus
+##########
+- regex: 'Nucleus(?:(?: |/v?)(\d+[\.\d]*))?'
+  name: 'MTK / Nucleus'
+  isMobile: 'true'
+  isTv: 'false'
+
+- regex: 'MTK(?:(?: |/v?)(\d+[\.\d]*))?'
+  name: 'MTK / Nucleus'
+  isMobile: 'true'
+  isTv: 'false'
+
+##########
 # Windows
 # http://en.wikipedia.org/wiki/Windows_NT#Releases
 # possibility of false positive when different marketing names share same NT kernel
@@ -105,11 +208,19 @@
 # (very) roughly ordered in terms of frequency of occurence of regex (win xp currently most frequent, etc)
 ##########
 # mobile systems
-- regex: '(Windows Phone) (\d+)\.(\d+)'
+- regex: '(Windows Phone);'
   osName: 'Windows Phone'
   isMobile: 'true'
 
-- regex: '(Windows Phone) OS (\d+)\.(\d+)'
+- regex: 'Windows Phone OS ((\d+)\.(\d+))'
+  osName: 'Windows Phone'
+  isMobile: 'true'
+
+- regex: 'Windows Phone ((\d+)\.(\d+))'
+  osName: 'Windows Phone'
+  isMobile: 'true'
+
+- regex: 'wds[ ](\d+)\.(\d+)'
   osName: 'Windows Phone'
   isMobile: 'true'
 
@@ -417,5 +528,6 @@
 
 - regex: '(Ubuntu|Kubuntu|Arch Linux|CentOS|Slackware|Gentoo|openSUSE|SUSE|Red Hat|Fedora|PCLinuxOS|Gentoo|Mageia)'
   vendor: 'Linux'
+
 - regex: '(Linux)/(\d+)\.(\d+)'
 - regex: '(Linux)'

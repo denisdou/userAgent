@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  */
 public enum PlatformEnum {
     ARM("arm", "ARM"),
-    X64("^[wow|x|win|amd64|x86_]64", "x64"),
+    X64("[wow|x|win|amd64|x86_]64", "x64"),
     X86("i[0-9]86|i86pc", "x86");
 
     private String regex;
