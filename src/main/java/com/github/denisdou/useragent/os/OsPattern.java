@@ -7,9 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author doujiajun
- * @date 15:45 2021/1/27
- * @email 402550833@qq.com
+ * @author doujiajun 402550833@qq.com
  */
 public class OsPattern {
     private final Pattern pattern;

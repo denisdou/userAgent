@@ -6,9 +6,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author doujiajun
- * @date 11:25 2021/1/28
- * @email 402550833@qq.com
+ * @author doujiajun 402550833@qq.com
  */
 public class BrowserParser {
     private final List<BrowserPattern> patterns;

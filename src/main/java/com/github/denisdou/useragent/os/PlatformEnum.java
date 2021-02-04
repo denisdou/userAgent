@@ -5,9 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author doujiajun
- * @date 18:09 2021/1/31
- * @email 402550833@qq.com
+ * @author doujiajun 402550833@qq.com
  */
 public enum PlatformEnum {
     ARM("arm", "ARM"),

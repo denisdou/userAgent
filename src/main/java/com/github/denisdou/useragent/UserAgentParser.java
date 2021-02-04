@@ -19,9 +19,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author doujiajun
- * @date 16:58 2021/1/26
- * @email 402550833@qq.com
+ * @author doujiajun 402550833@qq.com
  */
 public class UserAgentParser {
     public OsParser osParser;
@@ -36,9 +34,6 @@ public class UserAgentParser {
         loadConfig();
     }
 
-    /**
-     * load config from yml file
-     */
     public void loadConfig() {
         this.yaml = new Yaml(new SafeConstructor());
         osParser = OsParser.addList(readConfig("/os.yml"));
@@ -47,11 +42,6 @@ public class UserAgentParser {
         deviceDictionary = DeviceDictionary.addMap(readConfig("/DeviceDictionary.yml"));
     }
 
-    /**
-     * read yml file
-     * @param file
-     * @return
-     */
     public List<Map<String, String>> readConfig(String file) {
         try (InputStream stream = UserAgentParser.class.getResourceAsStream(file)) {
             @SuppressWarnings("unchecked")
@@ -65,11 +55,6 @@ public class UserAgentParser {
         }
     }
 
-    /**
-     * parse user agent
-     * @param agentString
-     * @return
-     */
     public UserAgent parse(String agentString) {
         if (StringUtils.isBlank(agentString)) {
             return null;
@@ -82,11 +67,6 @@ public class UserAgentParser {
         return new UserAgent(os, device, browser, device.isMobile(), os.isTv(), netType);
     }
 
-    /**
-     * parse net type
-     * @param agentString
-     * @return
-     */
     private String parseNetType(String agentString) {
         Matcher matcher = netTypePattern.matcher(agentString.toUpperCase());
         String result = "";

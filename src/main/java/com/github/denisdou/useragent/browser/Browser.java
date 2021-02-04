@@ -3,9 +3,7 @@ package com.github.denisdou.useragent.browser;
 import com.github.denisdou.useragent.Constants;
 
 /**
- * @author doujiajun
- * @date 10:47 2021/1/28
- * @email 402550833@qq.com
+ * @author doujiajun 402550833@qq.com
  */
 public class Browser {
     public static final Browser DEFAULT_BROWSER = new Browser(Constants.DEFAULT_VALUE, Constants.DEFAULT_VALUE, null, null, Engine.DEFAULT_ENGINE);

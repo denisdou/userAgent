@@ -3,9 +3,7 @@ package com.github.denisdou.useragent.os;
 import com.github.denisdou.useragent.Constants;
 
 /**
- * @author doujiajun
- * @date 15:58 2021/1/27
- * @email 402550833@qq.com
+ * @author doujiajun 402550833@qq.com
  */
 public class Os {
     public static final Os DEFAULT_OS = new Os(Constants.DEFAULT_VALUE, Constants.DEFAULT_VALUE, "0", "0", false, false, Constants.DEFAULT_VALUE);

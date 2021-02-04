@@ -7,9 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author doujiajun
- * @date 11:09 2021/1/28
- * @email 402550833@qq.com
+ * @author doujiajun 402550833@qq.com
  */
 public class DeviceDictionary {
     private final Map<String, Device> map;

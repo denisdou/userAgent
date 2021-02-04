@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.github.denisdou'
-version = '1.0.0'
+version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 compileJava {
@@ -33,6 +33,11 @@ task sourceJar(type: Jar) {
     classifier = "sources"
 }
 
+task javadocJar(type: Jar) {
+    from javadoc
+    classifier = 'javadoc'
+}
+
 
 publishing {
     publications {
@@ -43,6 +48,7 @@ publishing {
             //version '${version}'
             from components.java
             artifact sourceJar
+            artifact javadocJar
 
             // 添加 pom 相关信息
             // https://docs.gradle.org/current/dsl/org.gradle.api.publish.maven.MavenPublication.html
@@ -100,4 +106,10 @@ publishing {
 
 signing {
     sign publishing.publications.mavenJava
+}
+
+javadoc {
+    // <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    // 防止本地打开中文乱码
+    options.addStringOption("charset", "UTF-8")
 }

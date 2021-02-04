@@ -7,9 +7,7 @@ package com.github.denisdou.useragent.device;
 import com.github.denisdou.useragent.Constants;
 
 /**
- * @author doujiajun
- * @date 10:08 2021/1/28
- * @email 402550833@qq.com
+ * @author doujiajun 402550833@qq.com
  */
 public class Device {
     public static final Device DEFAULT_PC = new Device(Constants.DEFAULT_VALUE, Constants.DEFAULT_VALUE, Constants.PC, false, Constants.DEFAULT_VALUE, Constants.DEFAULT_VALUE);

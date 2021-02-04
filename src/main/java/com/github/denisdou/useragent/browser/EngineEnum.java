@@ -6,9 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author doujiajun
- * @date 17:19 2021/1/31
- * @email 402550833@qq.com
+ * @author doujiajun 402550833@qq.com
  */
 public enum EngineEnum {
     NETFRONT("netfront", "NetFront"),

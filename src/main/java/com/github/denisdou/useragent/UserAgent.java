@@ -5,9 +5,7 @@ import com.github.denisdou.useragent.device.Device;
 import com.github.denisdou.useragent.os.Os;
 
 /**
- * @author doujiajun
- * @date 16:51 2021/1/26
- * @email 402550833@qq.com
+ * @author doujiajun 402550833@qq.com
  */
 public class UserAgent {
     private final Os os;
