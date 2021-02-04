@@ -43,9 +43,9 @@ publishing {
     publications {
         // 这一个推送项目名称，mavenJava 相当于是一个 task name
         mavenJava(MavenPublication) {
-            //groupId 'com.mars'
-            //artifactId 'com.mars.useragent'
-            //version '${version}'
+            groupId project.group
+            artifactId project.name
+            version "${version}"
             from components.java
             artifact sourceJar
             artifact javadocJar
