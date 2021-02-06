@@ -30,7 +30,7 @@ public class UserAgentParser {
 
     private final static Pattern netTypePattern = Pattern.compile("\\W(WIFI|5G|4G|3G|2G)\\W*", Pattern.CASE_INSENSITIVE);
 
-    UserAgentParser() {
+    public UserAgentParser() {
         loadConfig();
     }
 
