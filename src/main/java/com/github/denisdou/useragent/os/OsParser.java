@@ -1,7 +1,6 @@
 package com.github.denisdou.useragent.os;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -17,11 +16,6 @@ public class OsParser {
     }
 
     public static OsParser addList(List<Map<String, String>> list) {
-        List<OsPattern> patternList = new ArrayList<>();
-
-        for (Map<String, String> config : list) {
-            patternList.add(OsPattern.addFromMap(config));
-        }
         return new OsParser(
                 list.stream().map(config -> {
                     return OsPattern.addFromMap(config);

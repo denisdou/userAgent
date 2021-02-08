@@ -1,4 +1,4 @@
-﻿########################################################################
+########################################################################
 # vendor        OS core, e.g. Windows, Linux, Mac, Android, iOS default value is "os"
 # osName        OS name, e.g. Windows 7, Mac OS X.default value is Group 1
 # isMobile      true or false. default value is "false"
@@ -126,76 +126,6 @@
 - regex: 'Windows IoT 10.0'
   osName: 'Windows IoT'
   majorVersion: '10'
-  isMobile: 'true'
-  isTv: 'false'
-
-##########
-# KaiOS
-##########
-- regex: 'KAIOS/((\d+)\.(\d+))?'
-  osName: 'KaiOS'
-  isMobile: 'true'
-  isTv: 'false'
-
-##########
-# Custom Android Roms
-##########
-- regex: 'RazoDroiD(?: v((\d+)\.(\d+))?'
-  name: 'RazoDroiD'
-  isMobile: 'true'
-  isTv: 'false'
-
-- regex: 'MildWild(?: CM-(\d+)\.(\d+))?'
-  name: 'MildWild'
-  isMobile: 'true'
-  isTv: 'false'
-
-- regex: 'CyanogenMod(?:[\-/](?:CM)?(\d+[\.\d]*))?'
-  name: 'CyanogenMod'
-  isMobile: 'true'
-  isTv: 'false'
-
-- regex: '(?:.*_)?MocorDroid(?:(\d+)\.(\d+))?'
-  name: 'MocorDroid'
-  isMobile: 'true'
-  isTv: 'false'
-
-- regex: 'Fire OS(?:/(\d+)\.(\d+))?'
-  name: 'Fire OS'
-  isMobile: 'true'
-  isTv: 'false'
-
-##########
-# AmigaOS
-##########
-- regex: 'AmigaOS[ ]?(\d+[\.\d]+)'
-  name: 'AmigaOS'
-  isMobile: 'false'
-  isTv: 'false'
-
-- regex: 'AmigaOS|AmigaVoyager|Amiga-AWeb'
-  name: 'AmigaOS'
-  isMobile: 'false'
-  isTv: 'false'
-
-##########
-# ThreadX
-##########
-- regex: 'ThreadX(?:/(\d+[\.\d]*))?'
-  name: 'ThreadX'
-  isMobile: 'false'
-  isTv: 'false'
-
-##########
-# MTK / Nucleus
-##########
-- regex: 'Nucleus(?:(?: |/v?)(\d+[\.\d]*))?'
-  name: 'MTK / Nucleus'
-  isMobile: 'true'
-  isTv: 'false'
-
-- regex: 'MTK(?:(?: |/v?)(\d+[\.\d]*))?'
-  name: 'MTK / Nucleus'
   isMobile: 'true'
   isTv: 'false'
 
