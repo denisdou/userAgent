@@ -1,4 +1,4 @@
-﻿#########################################################################
+#########################################################################
 # vendor        browser vendor, e.g. IE, Chrome, Firefox, Opera. default value is "family"
 # family        browser family name, e.g. Chrome, Mobile Chrome. default value is Group 1
 # majorVersion  major version. default value is Group 2

@@ -1,4 +1,4 @@
-﻿##########################################################################
+##########################################################################
 # vendor          device vendor, e.g. Huawei, apple
 # family          device   family Name, e.g. 华为 MediaPad M1 iPhone, Galaxy SIII
 # deviceType      device type. default value is "Phone"

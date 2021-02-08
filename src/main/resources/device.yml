@@ -1,4 +1,4 @@
-﻿##########################################################################
+##########################################################################
 # vendor          device vendor, e.g. Apple, Samsung, HTC. default value is Group 1
 # family    device family Name, e.g. iPhone, Galaxy SIII. default value is Group 2
 # isMobile        true or false. default value is "true"
